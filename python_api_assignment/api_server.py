@@ -19,7 +19,7 @@ def check_auth(auth_header):
 		return False
 
 
-@app.route('/api/users', methods=['POST'])
+@app.route('/api/users', methods=['GET', 'POST'])
 def users():
 	if not check_auth(request.headers.get("Authorization")):
 		return jsonify({"error": "Unauthorized"}), 401
@@ -29,7 +29,7 @@ def users():
 	return jsonify(dict(enumerate(users)))
 
 
-@app.route('/api/groups', methods=['POST'])
+@app.route('/api/groups', methods=['GET', 'POST'])
 def groups():
 	if not check_auth(request.headers.get("Authorization")):
 		return jsonify({"error": "Unauthorized"}), 401

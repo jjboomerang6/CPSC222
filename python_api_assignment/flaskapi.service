@@ -1,0 +1,17 @@
+
+[Unit]
+Description=Flask API Service
+After=network.target
+
+
+[Service]
+User=jack
+WorkingDirectory=/home/jack/CPSC222/python_api_assignment
+ExecStart=/home/jack/CPSC222/python_api_assignment/venv/bin/python /home/jack/CPSC222/python_api_assignment/api_server.py
+Restart=always
+
+
+[Install]
+WantedBy=multi-user.target
+
+
