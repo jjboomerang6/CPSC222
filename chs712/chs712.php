@@ -18,7 +18,7 @@ if($_SERVER["REQUEST_METHOD"] === "POST") {
     }
     $formatted = date("l F jS, Y - g:ia", $timestamp);
 
-    $query = "chs1Test.php?month=$month&day=$day&year=$year&hour=" . ($_POST["hour"]) . "&minute=$minute&ampm=$ampm";
+    $query = "chs712.php?month=$month&day=$day&year=$year&hour=" . ($_POST["hour"]) . "&minute=$minute&ampm=$ampm";
 
     echo $formatted;
     echo "<br><br>";
@@ -64,7 +64,7 @@ if($_SERVER["REQUEST_METHOD"] === "GET" && isset($_GET["month"])) {
         <th>AM/PM</th>
     </tr>
 
-    <form action="chs1Test.php" method="post">
+    <form action="chs712.php" method="post">
         <tr>
             <td>
                 <select name="month">
